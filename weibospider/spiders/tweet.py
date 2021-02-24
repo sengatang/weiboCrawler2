@@ -30,9 +30,9 @@ class TweetSpider(Spider):
 
         def init_url_by_keywords():
             # crawl tweets include keywords in a period, you can change the following keywords and date
-            keywords = ['留学生疫情']
-            date_start = datetime.datetime.strptime("2020-01-01", '%Y-%m-%d')
-            date_end = datetime.datetime.strptime("2020-09-30", '%Y-%m-%d')
+            keywords = ['留学疫情']
+            date_start = datetime.datetime.strptime("2020-01-10", '%Y-%m-%d')
+            date_end = datetime.datetime.strptime("2020-10-01", '%Y-%m-%d')
             time_spread = datetime.timedelta(days=1)
             url_format_by_day = "https://weibo.cn/search/mblog?hideSearchFrame=&keyword={}&starttime={}&endtime={}&atten=1&sort=time&page=1"
             url_format_by_hour = "https://weibo.cn/search/mblog?hideSearchFrame=&keyword={}&advancedfilter=1&starttime={}&endtime={}&sort=time&atten=1&page=1"
