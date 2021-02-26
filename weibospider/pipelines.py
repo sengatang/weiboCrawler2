@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import pymongo
 from pymongo.errors import DuplicateKeyError
-from settings import MONGO_HOST, MONGO_PORT
+from settings import MONGO_HOST, MONGO_USER_NAME, MONGO_USER_PWD
 
 
 class MongoDBPipeline(object):
