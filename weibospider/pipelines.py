@@ -6,7 +6,11 @@ from settings import MONGO_HOST, MONGO_PORT
 
 class MongoDBPipeline(object):
     def __init__(self):
-        client = pymongo.MongoClient(MONGO_HOST, MONGO_PORT)
+        client = pymongo.MongoClient(
+            host = MONGO_HOST,
+            username = MONGO_USER_NAME,
+            password = MONGO_USER_PWD
+        )
         db = client['weibo']
         self.Users = db["Users"]
         self.Tweets = db["Tweets"]
